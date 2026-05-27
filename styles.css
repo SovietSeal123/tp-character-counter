@@ -14,7 +14,6 @@
 body{
     display: flex;
     background-color: #12131a;
-    color: #B4B7C9;
 }
 
 
@@ -24,6 +23,7 @@ header{
 
 
 header h2{
+    color: #B4B7C9;
     position: relative;
     top: 18px;
 }
@@ -45,4 +45,49 @@ header button{
     top: 15px;
     right: 30px;
     background-color: #262b3a;
+}
+section h1{
+    position: fixed;
+    text-align: center;
+    top: 125px;
+    left: 32%;
+    color: #F2F2F7;
+}
+section textarea{
+    position: fixed;
+    padding-top: 10px;
+    padding-left: 13px;
+    top: 215px;
+    right: 19%;
+    width: clamp(250px, 70vw, 800px); /*clamp: sirve para darle a una propiedad un valor minimo, adaptable, maximo*/
+    max-width: 90%;
+    height: 150px;
+    padding-top: 10px;
+    padding-left: 13px;
+    background-color: #1C1F2A;
+    color: #B4B7C9;
+}
+
+section div{
+    display: flex;
+    gap: 20px;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    position: relative;
+    top: 380px;
+    right: 7%;
+}
+
+p{
+    position: relative;
+    top: 380px;
+    right: 7%;
+}
+
+p,span{
+    color: #B4B7C9; 
 }

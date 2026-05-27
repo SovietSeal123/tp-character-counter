@@ -73,7 +73,7 @@ section textarea{
     resize: vertical;
 }
 
-section div{
+.opciones{
     width: clamp(250px, 70vw, 800px);
     display: flex;
     align-items: center;
@@ -83,7 +83,7 @@ section div{
 }
 
 .texto-aproximado{
-    margin-left: 220px;
+    margin-left: auto;
 }
 
 .checkbox{
@@ -101,13 +101,18 @@ input[type="checkbox"]{
 }
 
 input[type="checkbox"]::before{
-    content: "✔";
-    color: #12131A;
+    content: "";
 }
 
 input[type="checkbox"]:checked{
     background-color: #D3A0FA;
     border-color: #D3A0FA;
+}
+
+input[type="checkbox"]:checked::after{
+    content: "✔";
+    color: #12131A;
+    position: absolute;
 }
 
 span{
@@ -121,12 +126,19 @@ span{
     flex-wrap: wrap;
     margin-top: 30px;
 }
-
+.fondo{
+    width: 0px;
+}
 .card1{
     background-color: #C99DFF;
     width: 220px;
     padding: 20px;
     border-radius: 12px;
+    background-image: url(./assets/img/card1.png);
+    overflow: hidden;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top right;
 }
 
 .card1 h3{
@@ -140,6 +152,11 @@ span{
     border-radius: 12px;
     display: flex;
     flex-direction: column;
+    background-image: url(./assets/img/card2.png);
+    overflow: hidden;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top right;
 }
 
 .card2 h3{
@@ -151,6 +168,11 @@ span{
     width: 220px;
     padding: 20px;
     border-radius: 12px;
+    background-image: url(./assets/img/card3.png);
+    overflow: hidden;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top right;
 }
 
 .card3 h3{
@@ -161,4 +183,82 @@ span{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+}
+
+section h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #F2F2F7;
+    margin-right: 50%;
+}
+
+.barra-progreso{
+    width: clamp(250px, 70vw, 800px);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 30px;
+    align-items: stretch;
+}
+
+.fila{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.letra{
+    color: #F2F2F7;
+    width: 20px;
+}
+
+.barra{
+    flex: 1;
+    height: 12px;
+    background-color: #1C1F2A;
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.relleno{
+    height: 100%;
+    background-color: #D3A0FA;
+    border-radius: 999px;
+}
+
+.r1{
+    width: 16.06%;
+}
+
+.r2{
+    width: 11.65%;
+}
+
+.r3{
+    width: 11.24%;
+}
+
+.r4{
+    width: 8.84%;
+}
+
+.r5{
+    width: 8.43%;
+}
+
+.numero{
+    color: #B4B7C9;
+    min-width: 95px;
+}
+
+.ver-mas{
+    width: clamp(250px, 70vw, 800px);
+    display: flex;
+    align-items: center;
+}
+
+.ver-mas button {
+    margin-top: 20px;
+    margin-right: auto;
 }

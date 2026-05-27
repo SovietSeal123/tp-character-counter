@@ -77,10 +77,13 @@ section div{
     width: clamp(250px, 70vw, 800px);
     display: flex;
     align-items: center;
-    justify-content: space-between;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 10px;
     margin-top: 20px;
+}
+
+.texto-aproximado{
+    margin-left: 220px;
 }
 
 .checkbox{
@@ -89,7 +92,24 @@ section div{
     gap: 5px;
 }
 
-p,
-span{
+input[type="checkbox"]{
+    appearance: none; /*borra el estilo por defecto */
+    width: 18px;
+    height: 18px;
+    border: 2px solid #B4B7C9;
+    border-radius: 4px;
+}
+
+input[type="checkbox"]::before{
+    content: "✔";
+    color: #12131A;
+}
+
+input[type="checkbox"]:checked{
+    background-color: #D3A0FA;
+    border-color: #D3A0FA;
+}
+
+p,span{
     color: #B4B7C9;
 }

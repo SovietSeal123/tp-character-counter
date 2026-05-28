@@ -10,8 +10,20 @@
     font-family: "Space Grotesk";
 }
 
+:root{
+  --fondoPrincipal: #12131A;
+  --fondoGeneral: #1C1F2A;
+  --textoPrincipal: #F2F2F7;
+  --textoSecundario: #B4B7C9;
+  --cardVioleta: #C99DFF;
+  --cardNaranja: #FFB21E;
+  --cardCoral: #FF8A65;
+  --barraProgreso: #D19BFF;
+  --bordes: #2A2D3A;
+}
+
 body{
-    background-color: #12131A;
+    background-color: var(--fondoPrincipal);
     display: flex;
     flex-direction: column;
 }
@@ -23,7 +35,7 @@ header{
 }
 
 header h2{
-    color: #B4B7C9;
+    color: var(--textoSecundario);
     margin-right: auto;
 }
 
@@ -34,13 +46,17 @@ header img{
 }
 
 header button{
-    background-color: #262B3A;
+    background-color: var(--fondoGeneral);
     border: none;
     border-radius: 10px;
     padding: 5px;
     margin-top: 12px;
     margin-right: 15px;
     cursor: pointer;
+}
+
+header button:hover{
+    opacity: 0.8;
 }
 
 header button img{
@@ -57,7 +73,7 @@ section{
 
 section h1{
     text-align: center;
-    color: #F2F2F7;
+    color: var(--textoPrincipal);
     margin-bottom: 40px;
 }
 
@@ -67,10 +83,11 @@ section textarea{
     height: 150px;
     padding-top: 10px;
     padding-left: 13px;
-    background-color: #1C1F2A;
-    color: #B4B7C9;
+    background-color: var(--fondoGeneral);
+    color: var(--textoSecundario);
     border: none;
     border-radius: 10px;
+    border: 2px solid var(--bordes);
     resize: vertical;
 }
 
@@ -97,7 +114,7 @@ input[type="checkbox"]{
     appearance: none; /*borra el estilo por defecto */
     width: 18px;
     height: 18px;
-    border: 2px solid #B4B7C9;
+    border: 2px solid var(--bordes);
     border-radius: 4px;
 }
 
@@ -106,18 +123,18 @@ input[type="checkbox"]::before{
 }
 
 input[type="checkbox"]:checked{
-    background-color: #D3A0FA;
-    border-color: #D3A0FA;
+    background-color: var(--barraProgreso);
+    border-color: var(--barraProgreso);
 }
 
 input[type="checkbox"]:checked::after{
     content: "✔";
-    color: #12131A;
+    color:var(--fondoPrincipal);
     position: absolute;
 }
 
 span{
-    color: #B4B7C9;
+    color: var(--textoSecundario);
 }
 
 .cards{
@@ -131,7 +148,7 @@ span{
     width: 0px;
 }
 .card1{
-    background-color: #C99DFF;
+    background-color: var(--cardVioleta);
     width: 220px;
     padding: 20px;
     border-radius: 12px;
@@ -142,12 +159,9 @@ span{
     background-position: top right;
 }
 
-.card1 h3{
-    font-size: 40px;
-}
 
 .card2{
-    background-color: #FFB21E;
+    background-color: var(--cardNaranja);
     width: 220px;
     padding: 20px;
     border-radius: 12px;
@@ -160,12 +174,8 @@ span{
     background-position: top right;
 }
 
-.card2 h3{
-    font-size: 40px;
-}
-
 .card3{
-    background-color: #FF8A65;
+    background-color: var(--cardCoral);
     width: 220px;
     padding: 20px;
     border-radius: 12px;
@@ -176,20 +186,21 @@ span{
     background-position: top right;
 }
 
-.card3 h3{
-    font-size: 40px;
-}
-
 .card1,.card2,.card3{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+
+.card1 h3, .card2 h3, .card3 h3{
+    font-size: 40px;
 }
 
 section h2 {
     margin-top: 20px;
     margin-bottom: 10px;
-    color: #F2F2F7;
+    color: var(--textoPrincipal);
     margin-right: 50%;
 }
 
@@ -210,21 +221,21 @@ section h2 {
 }
 
 .letra{
-    color: #F2F2F7;
+    color: var(--textoSecundario);
     width: 20px;
 }
 
 .barra{
     flex: 1;
     height: 12px;
-    background-color: #1C1F2A;
+    background-color: var(--fondoGeneral);
     border-radius: 999px;
     overflow: hidden;
 }
 
 .relleno{
     height: 100%;
-    background-color: #D3A0FA;
+    background-color: var(--barraProgreso);
     border-radius: 999px;
 }
 
@@ -249,7 +260,7 @@ section h2 {
 }
 
 .numero{
-    color: #B4B7C9;
+    color: var(--textoSecundario);
     min-width: 95px;
 }
 
@@ -263,7 +274,7 @@ section h2 {
     margin-right: auto;
     background: none;
     border: none;
-    color: #B4B7C9;
+    color: var(--textoSecundario);
     display: flex;
     align-items: center;
     gap: 5px;

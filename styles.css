@@ -118,6 +118,11 @@ input[type="checkbox"]{
     border-radius: 4px;
 }
 
+input[type="checkbox"]:hover{
+    border-color: var(--barraProgreso);
+    cursor: pointer;
+}
+
 input[type="checkbox"]::before{
     content: "";
 }

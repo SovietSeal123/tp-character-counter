@@ -40,6 +40,7 @@ header button{
     padding: 5px;
     margin-top: 12px;
     margin-right: 15px;
+    cursor: pointer;
 }
 
 header button img{
@@ -258,7 +259,15 @@ section h2 {
     align-items: center;
 }
 
-.ver-mas button {
-    margin-top: 20px;
+.ver-mas button{
     margin-right: auto;
+    background: none;
+    border: none;
+    color: #B4B7C9;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
 }
